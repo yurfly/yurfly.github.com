@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="{{ site.authorinfo }}">
+    <meta name="description" content="{{ site.subtitle }}">
+    <!--页面优化-->
+    <meta name="HandheldFriendly" content="True">
+    <!--设置浏览器的默认渲染宽度-->
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+    <title>{{ post.title }}</title>
+
+    <!-- syntax highlighting CSS -->
+    <link rel="stylesheet" href="/css/syntax.css">
+    <link href="{{ site.url }}/css/highlight.css" media="screen, projection" rel="stylesheet" type="text/css">
+    <link href="{{ site.url }}/css/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+    <link href="{{ site.url }}/css/style.css" rel="stylesheet" type="text/css">
+<!--[if lt IE 9]><script src="{{ site.url }}/js/html5.js"></script><![endif]-->
+    <link rel="stylesheet" href="{{ site.url }}/css/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
+    <script type="text/javascript" src="{{ site.url }}/css/fancybox/jquery.fancybox.pack.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("a[href$='.jpg'],a[href$='.jpeg'],a[href$='.png'],a[href$='.gif'],a[href$='.bmp'],a[href$='.JPG'],a[href$='.JPEG'],a[href$='.PNG'],a[href$='.GIF'],a[href$='.BMP']").attr('rel','group-images').fancybox({
+                openEffect    : 'none',
+                closeEffect    : 'none'
+            });
+        });
+    </script>
+    </head>
+    <body>

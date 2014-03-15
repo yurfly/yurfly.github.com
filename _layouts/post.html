@@ -1,0 +1,53 @@
+---
+layout: default
+---
+<article class="post" id="posts">
+    {% if post.metadata.link %}
+    <h1 class="title">[链接]<a href="{{post.metadata.link}}" target="_blank">{{ post.title }}</a></h1>
+    {% else %}
+    <h1 class="title"><a href="{{post.url}}#content">{{ post.title }}</a></h1>
+    {% endif %}
+
+    <div class="time">
+        <span class="date">{{ site.time | date_to_long_string }}</span>
+    </div>
+
+    <div class="entry-content">
+        <div class="p_part">
+        {{ post| auto_content }}
+        {{ content }}
+        </div>
+    </div>
+
+    <div class="category">
+        {% if post.tags %}
+            <div class="tags">
+                Tags:
+                {% for post in site.tags %}
+                    <a href="/tags/{{ tag }}">{{ tag }}</a>
+                {% endfor %}
+            </div>
+        {% endif %}
+    </div>
+    {% if site.socialshare %}
+        <div class="socialshare">
+            {{ site.socialshare }}
+        </div>
+    {% endif %}
+
+</article>
+
+<!-- Duoshuo Comment BEGIN -->
+<div class="ds-thread" data-thread-key="yurfly_index" data-title="message_board" data-url="yurfly.com"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"yurfly"};
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = 'http://static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+        || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+</script>
+<!-- Duoshuo Comment END -->

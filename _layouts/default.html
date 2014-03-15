@@ -1,0 +1,97 @@
+{% include header.html %}
+
+<div class="container">
+    <div class="left-col">
+        <div class="intrude-less">
+        <header id="header" class="inner">
+            <div class="profilepic">
+                <img id="ProfilePicture" style="width: 160px;" alt="Profile Picture" src="{{ site.url }}/img/gravatar.png"></img>                
+            </div>
+            {% if site.weixin %}
+            <div class="ProfileWeixin">
+                <img src="{{ site.url }}/img/mmqrcode.png" alt="微信二维码" style="width: 160px; border-radius:0%; -moz-border-radius:0%; -webkit-border-radius:0%; display: none" id="ProfileWeixin" />
+                <script type="text/javascript">
+                    function weixin_mouseOver()
+                    {
+                        document.getElementById( "ProfilePicture" ).style.display = "none"
+                        document.getElementById( "ProfileWeixin" ).style.display = ""
+                    }
+                    function weixin_mouseOut()
+                    {
+                        document.getElementById( "ProfilePicture" ).style.display = ""
+                        document.getElementById( "ProfileWeixin" ).style.display = "none"
+                    }
+                </script>
+            </div>
+            {% endif %}
+            
+            <h1><a href="/">{{ site.name }}</a></h1>
+            {% if site.something %}
+            <section>
+                <p>{{ site.something }}</p>
+            </section>
+            {% endif %}
+            <nav id="main-nav">
+                <ul class="main-navigation">
+                    <li><a href="{{ site.url }}/list.html">Blog</a></li>
+                    <li><a href="{{ site.url }}/comments.html">Comments</a></li>
+                    <li><a href="{{ site.url }}/links.html">Links</a></li>
+                    <li><a href="{{ site.url }}/about.html">About</a></li>
+                </ul>
+            </nav>
+            <nav id="sub-nav">
+            <div class="social">
+                {% if site.facebook %}
+                <a class="facebook" href="{{ site.facebook }}" title="Facebook">Facebook</a>
+                {% endif %}
+                {% if site.google %}
+                <a class="google" href="{{ site.google }}" title="Google+">Google+</a>
+                {% endif %}
+                {% if site.github %}
+                <a class="github" href="{{ site.github }}" title="GitHub">GitHub</a>
+                {% endif %}
+                {% if site.linkedin %}
+                <a class="linkedin" href="{{ site.linkedin }}" title="Linkedin">Linkedin</a>
+                {% endif %}
+                {% if site.delicious %}
+                <a class="delicious" href="{{ site.delicious }}" title="Delicious">Delicious</a>
+                {% endif %}
+                {% if site.instagram %}
+                <a class="instagram" href="{{ site.instagram }}" title="Instagram">Instagram</a>
+                {% endif %}
+                {% if site.weibo %}
+                <a class="weibo" href="{{ site.weibo }}" title="新浪微博">新浪微博</a>
+                {% endif %}
+                {% if site.qq %}
+                <a class="qq" href="{{ site.qq }}" title="腾讯微博">腾讯微博</a>
+                {% endif %}
+                {% if site.weixin %}
+                <a class="weixin" href="#" title="{{ site.weixin }}" onmouseover="weixin_mouseOver()" onmouseout="weixin_mouseOut()">微信</a>
+                <script type="text/javascript">
+                    $(document).ready(function(){
+                        $(".weixin").removeAttr("rel");
+                    });
+                </script>
+                {% endif %}
+                {% if site.email %}
+                <a class="email" href="mailto:{{ site.email }}" title="EMail">EMail</a>
+                {% endif %}
+                {% if site.rss %}
+                <a class="rss" href="{{ site.rss }}" title="RSS">RSS</a>
+                {% endif %}
+            </div>
+            </nav>
+        </header>               
+        </div>
+    </div>  
+    <div class="mid-col">
+        <div class="mid-col-container">
+            <div id="content" class="inner">
+             {{ content }}             
+            </div>
+        </div>
+        {% include footer.html %}
+    </div>
+</div>
+    </body>
+</html>

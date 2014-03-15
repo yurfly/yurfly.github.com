@@ -1,0 +1,20 @@
+---
+layout: default
+---
+{% for post in site.posts %}
+<section class="archives">
+<h1 class="year"></h1>
+<article>
+    <div class="meta">
+        <div class="date">
+            <time >{{ post.date |  date_to_long_string }}</time>
+        </div>
+    </div>
+    {% if post.metadata.link %}
+    <h1 class="title">[链接]<a href="{{post.metadata.link}}" target="_blank">{{ post.title }}</a></h1>
+    {% else %}
+    <h1 class="title"><a href="{{post.url}}#content">{{ post.title }}</a></h1>
+    {% endif %}
+</article>
+</section>
+{% endfor %}
