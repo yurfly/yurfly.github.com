@@ -1,11 +1,10 @@
 {% include header.html %}
-
 <div class="container">
     <div class="left-col">
         <div class="intrude-less">
         <header id="header" class="inner">
             <div class="profilepic">
-                <img id="ProfilePicture" style="width: 160px;" alt="Profile Picture" src="{{ site.url }}/img/gravatar.png"></img>                
+                <img id="ProfilePicture" style="width: 160px;" alt="Profile Picture" src="{{ site.url }}/img/gravatar.png" />                
             </div>
             {% if site.weixin %}
             <div class="ProfileWeixin">
@@ -40,23 +39,11 @@
             </nav>
             <nav id="sub-nav">
             <div class="social">
-                {% if site.facebook %}
-                <a class="facebook" href="{{ site.facebook }}" title="Facebook">Facebook</a>
-                {% endif %}
-                {% if site.google %}
-                <a class="google" href="{{ site.google }}" title="Google+">Google+</a>
-                {% endif %}
                 {% if site.github %}
                 <a class="github" href="{{ site.github }}" title="GitHub">GitHub</a>
                 {% endif %}
                 {% if site.linkedin %}
                 <a class="linkedin" href="{{ site.linkedin }}" title="Linkedin">Linkedin</a>
-                {% endif %}
-                {% if site.delicious %}
-                <a class="delicious" href="{{ site.delicious }}" title="Delicious">Delicious</a>
-                {% endif %}
-                {% if site.instagram %}
-                <a class="instagram" href="{{ site.instagram }}" title="Instagram">Instagram</a>
                 {% endif %}
                 {% if site.weibo %}
                 <a class="weibo" href="{{ site.weibo }}" title="新浪微博">新浪微博</a>
@@ -73,7 +60,7 @@
                 </script>
                 {% endif %}
                 {% if site.email %}
-                <a class="email" href="mailto:{{ site.email }}" title="EMail">EMail</a>
+                <a class="email" href="mailto:{{ site.email }}" title="Email">EMail</a>
                 {% endif %}
                 {% if site.rss %}
                 <a class="rss" href="{{ site.rss }}" title="RSS">RSS</a>
@@ -92,5 +79,5 @@
         {% include footer.html %}
     </div>
 </div>
-    </body>
+</body>
 </html>

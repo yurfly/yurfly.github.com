@@ -4,7 +4,6 @@ pygments: true
 permalink: /:month-:day-:year/:title.html
 paginate: 3
 author: yurfly
-authorinfo: ios,c,web,php
 something: stay hungry, stay foolish
 email: yurfly(at)gmail.com
 github: http://github.com
