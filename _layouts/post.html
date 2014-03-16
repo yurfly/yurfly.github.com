@@ -2,15 +2,11 @@
 layout: default
 ---
 <article class="post" id="posts">
-    {% if post.metadata.link %}
-    <h1 class="title">[链接]<a href="{{post.metadata.link}}" target="_blank">{{ post.title }}</a></h1>
-    {% else %}
-    <h1 class="title"><a href="{{post.url}}#content">{{ post.title }}</a></h1>
-    {% endif %}
+    <h1 class="title"><a href="{{page.url}}#content">{{ page.title }}</a></h1>
 
-    <div class="time">
+    <div class="time"  style="text-align:right">
         <span class="date">{{ site.time | date_to_long_string }}</span>
-    </div>
+    </div><hr/>
 
     <div class="entry-content">
         <div class="p_part">

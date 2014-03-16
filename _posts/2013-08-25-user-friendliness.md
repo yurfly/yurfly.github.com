@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 什么是“对用户友好”
+categories: About
 tag: Reprinted
 date: 2013-08-25
 ---

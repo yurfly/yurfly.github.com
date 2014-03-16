@@ -1,13 +1,14 @@
 ---
 layout: default
 ---
-{% for post in site.posts %}
+{% for category in site.categories %}
 <section class="archives">
-<h1 class="year"></h1>
+<h1 href="#{{ category | first }}" class="year">{{ category | first }} </h1>
+{% for post in category.last %}
 <article>
     <div class="meta">
         <div class="date">
-            <time >{{ post.date |  date_to_long_string }}</time>
+            <time >{{ post.date | date:"%d/%m/%Y"}}</time>
         </div>
     </div>
     {% if post.metadata.link %}
@@ -16,5 +17,6 @@ layout: default
     <h1 class="title"><a href="{{post.url}}#content">{{ post.title }}</a></h1>
     {% endif %}
 </article>
+{% endfor %}
 </section>
 {% endfor %}
